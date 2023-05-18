@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %} {% block title %}Privacy policy {{ block.super }} {% endblock %} {% block content %}
+<!-- いろいろ書く -->
+<nav class="m-3 px-4" aria-label="breadcrumb">
+    <ol class="breadcrumb my-1">
+        <li class="breadcrumb-item"><a href="{% url 'base:home' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'base:privacy_list' %}">Privacy Policy</a></li>
+        <li class="breadcrumb-item active" aria-current="page">NotiSave Privacy Policy</li>
+    </ol>
+</nav>
+<h2 align="center" class="mt-5">プライバシーポリシー</h2>
+<div class="container">
+    <div class="row my-5">
+        <div class="col-sm-6">
+            <a href="https://policies.google.com/technologies/ads?hl=ja">
+            <div class="card p-4 m-2">
+                <h4 align="center">広告について</h4>
+                <div class="card-body">
+                    本アプリでは、広告配信ツールとしてAdMob(Google Inc.)を使用しており、 AdMobがご利用者の情報を自動取得する場合がございます。 取得する情報、利用目的、第三者への提供等につきましては、 以下の広告配信事業者のアプリケーション・プライバシーポリシーのリンクよりご確認ください。
+                    <div>
+                        <br />
+                        <br />
+                        Google 広告に関するポリシー
+
+                        <p>https://policies.google.com/technologies/ads?hl=ja</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-sm-6">
+            <a href="https://policies.google.com/privacy?hl=ja">
+            <div class="card p-4 m-2">
+                <h4 align="center">利用状況解析ついて</h4>
+                <div class="card-body">
+                    本アプリでは、今後の開発の参考とするため、 アプリの利用状況データを収集するツールとしてFirebase(Google Inc.)を使用しており、 Firebaseがご利用者の情報を自動取得する場合がございます。 取得する情報、利用目的、第三者への提供等につきましては、
+                    以下のGoogleプライバシーポリシーのリンクよりご確認ください。
+                    <div>
+                        
+                        <br />
+                        <br />
+                        Google プライバシーポリシー
+
+                        <p>https://policies.google.com/privacy?hl=ja</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- サイドバーを作る場合 -->
+<!-- その場合は，いろいろ書くときにサイドバー用のスペースを空けておく -->
+{% comment %} {% include 'base/sidebar.html' %} {% endcomment %} 
+
+{% endblock %}

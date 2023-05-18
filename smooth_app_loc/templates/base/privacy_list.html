@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+{% block title %}Privacy policy
+  {{ block.super }}
+{% endblock %}
+{% block content %}
+  {%load static%}
+  <nav class="m-3 px-4" aria-label="breadcrumb">
+    <ol class="breadcrumb my-1">
+        <li class="breadcrumb-item"><a href="{% url 'base:home' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+    </ol>
+  </nav>
+  <div class="m-4 p-4">
+    <div style="margin-bottom: 20px;">
+      <h1>
+        プライバシーポリシー
+      </h1>
+    </div>
+    <div class="border-rounded p-4 m-4" id="note_pp">
+      <h1>
+        SmoothNote
+      </h1>
+      <p class=" m-2">
+        プライバシーポリシーは<b>
+          <a href="{% url 'base:privacy_smooth' %}" style="color: #22BBBB;">こちら</a>
+        </b>から
+      </p>
+    </div>
+    <div class="border-rounded p-4 m-4" id="noti_pp">
+      <h1>
+        NotiSave
+      </h1>
+      <p class="m-2">
+        プライバシーポリシーは<b>
+          <a href="{% url 'base:privacy_notisave' %} " style="color: #BB22BB;">こちら</a>
+        </b>から
+      </p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,131 @@
+a{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #BBBBBB;
+}
+
+body {
+    background-color:#333333;
+    color: #EEEEEE;
+    font-family: "Meiryo", sans-serif;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #EEEEEE;
+}
+
+
+.card {
+    background-color:#222222;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+#note_border {
+  border: 2px solid #22FFFF;
+  background-color: #22FFFF;
+}
+
+#noti_border {
+  border: 2px solid #FF22FF;
+  background-color: #FF22FF;
+}
+
+#note_pp {
+  border-radius: 5px;
+  border: 3px solid #22BBBB;
+  background-color: #222222;
+  box-shadow: 0 0 10px rgba(200,255,255, 0.7);
+}
+
+#noti_pp {
+  border-radius: 5px;
+  border: 3px solid #BB22BB;
+  background-color: #222222;
+  box-shadow: 0 0 10px rgba(255, 200,255, 0.7);
+}
+
+.header-title {
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    text-shadow: -3px 10px 7px #000000;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255,255,255,.8);
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+  color: rgba(255,255,255,1);
+}
+
+.navbar-light .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.customHeader {
+  background-color: #222222;
+}
+
+.customFooter {
+  background-color: #222222;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+} 
+
+#push {
+  height: 100px;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.customfont {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.breadcrumb {
+  background-color: #333333;
+}
+
+li.breadcrumb-item > a {
+  text-decoration: underline;
+}
+
+li.breadcrumb-item.active {
+  text-decoration: none;
+  color:#EEEEEE;
+}
+
+.form-control {
+  background-color: #EEEEEE;
+}
+
+.btn {
+  color:#EEE;
+  background-color: #7809c2;
+}
+
+.btn:hover{
+  color:#EEE;
+  background-color: #48036d;
+}

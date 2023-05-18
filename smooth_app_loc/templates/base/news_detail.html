@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block title %}{{object.title}} -
+  {{ block.super }}
+{% endblock %}
+{% block content %}
+	<!-- いろいろ書く -->
+    <nav class="m-3 px-4" aria-label="breadcrumb">
+        <ol class="breadcrumb my-1">
+            <li class="breadcrumb-item"><a href="{% url 'base:home' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Topic</li>
+        </ol>
+    </nav>
+	<div class="row p-5">
+		<div class="col-md-9 m-4 py-4 text-left">
+            <h1>{{ object.title }}</h1>
+            <p>{{ object.created_date}}
+            <div class="p-4" style="border: 2px solid #BBBBBB;">
+                <p class="my-1">{{object.sentence}}</p> 
+            </div>
+            <div class="my-4">
+                <a href="{% url 'base:home' %}" style="text-decoration:underline;">戻る</a>
+            </div>
+        </div>
+	</div>
+{% endblock %}

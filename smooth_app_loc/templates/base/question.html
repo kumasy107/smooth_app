@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% block title %}Privacy policy
+  {{ block.super }}
+{% endblock %}
+{% block content %}
+{%load static%}
+<nav class="m-3 px-4" aria-label="breadcrumb">
+    <ol class="breadcrumb my-1">
+        <li class="breadcrumb-item"><a href="{% url 'base:home' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Question</li>
+    </ol>
+</nav>
+<div class="row px-4 py-2">
+    <div class="col-md-9 m-4 py-4 text-left">
+        <div style="margin-bottom: 20px;">
+            <h1>質問フォーム</h1>
+            <p>何か質問がございましたら、こちらのフォームから送信してください。
+        </div>
+        <form method="post" class="question">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p><input class="mt-4 btn" type="submit" value="送信する" /></p>
+        </form>
+        {% if form.errors %}
+        <div class="alert alert-danger mt-4">
+            <ul>
+            {% for field_errors in form.errors.values %}
+                {% for error in field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

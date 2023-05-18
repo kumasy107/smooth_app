@@ -1,0 +1,101 @@
+{% extends 'base/base.html' %} {% block title %}Home {{ block.super }} {% endblock %} {% block content %} {%load static%} {% block css %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />{%endblock%}
+<!-- いろいろ書く -->
+<h2 align="center" class="my-5 customfont">アプリを活用することで<br />
+    あなたの生活をより快適にしましょう</h2>
+<div class="my-5">
+<div style="position: relative;">
+<img src="{% static 'images/intersection4.jpeg'%}" height=400 style="filter: blur(5px); width: 100%">
+<img src="{% static 'images/notiSave-1.png' %}" alt="重ねる画像" width=300 style="position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%); height: 150%;">
+</div>
+</div>
+<div class="my-4 mx-8">
+    <h1 class="pt-5 px-5 text-center text-white" style="margin-top: 230px;">Our Work</h1>
+    <h5 class="text-center m-4 p-4">
+        私たちは、生活に欠かせないツールをさらに速く、効果的にするアプリを開発しています。
+    </h5>
+    {% comment %} <hr class="mx-5" style="border: 3px solid white;"> {% endcomment %}
+    <div class="pt-5 px-5">
+        <h1 id="smoothnote">
+            SmoothNote 
+            {% comment %} <a href='https://play.google.com/store/apps/details?id=com.smoothapp.notificationsaver&pli=1&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' width=120 src='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png'/></a> {% endcomment %}
+        </h1>
+    </div>
+    <hr class="mx-5" id="note_border">
+    <div class="row p-5">
+        <div class="col-md-12">
+            <h3>現在、本アプリの公開は停止しています。</h3>
+        </div>
+        <div class="col-md-6 py-4 text-center">
+            <div style="display: flex  position: relative;">
+                <img src="{% static 'images/top.jpg' %}" class="animate__animated animate__slideInLeft" style="width: 80%" alt="トップ画像です" />
+            </div>
+        </div>
+
+        <div class="col-md-6 p-4">
+            <h1 class="customfont">
+                長文メモを簡単画像化
+            </h1>
+            <h4 class="customfont py-4">
+                <ul>
+                    <div class="py-2">
+                    <li>ロングスクリーンショット</li>
+                    どんなに長い文章でも一枚の画像で出力
+                    </div>
+                    <div class="py-2">
+                    <li>カスタムUI</li>
+                    メモ一覧を自分好みにカスタマイズ可能
+                    </div>
+                </ul>
+            </h4>
+        </div>
+    </div>
+    <h1 class="pt-5 px-5" id="notisave">
+        NotiSave
+        <a href='https://play.google.com/store/apps/details?id=com.smoothapp.notificationsaver&pli=1&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' width=120 src='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png'/></a>
+    </h1>
+    <hr class="mx-5" id="noti_border">
+    <div class="row p-5">
+        <div class="col-md-6 py-4 text-center">
+            <div style="display: flex  position: relative;">
+                <img src="{% static 'images/notisave_4.png' %}" class="animate__animated animate__slideInLeft" style="width: 40%" alt="トップ画像です" />
+            </div>
+        </div>
+
+        <div class="col-md-6 p-4">
+            <h1 class="customfont">
+                過去の通知を素早く確認
+            </h1>
+            <h4 class="customfont py-4">
+                <ul>
+                    <div class="py-2">
+                    <li>軽量保存設計</li>
+                    大量の通知を保存したまま、素早く起動、検索が可能
+                    </div>
+                    <div class="py-2">
+                    <li>詳細情報表示</li>
+                    長い通知もその場で読める、1タップで簡単コピー
+                    </div>
+                </ul>
+            </h4>
+        </div>
+    </div>
+    
+    <h3 class="pt-5 px-5" style="text-align: center;">Coming soon...</h3>
+    <h5 class="text-center m-4 p-4">
+        現在も新たなアプリを開発中です。
+    </h5>
+    <h1 class="text-center">Topic</h1>
+    <div class="overflow-auto m-4 p-4 mx-auto" style="max-width: 700px; max-height: 200px; border: 1px solid #BBBBBB;">
+        {% for news in news_list %} 
+                {% comment %} <p class="my-1"><a href="{% url 'base:member_detail' member.pk%}">{{member.name}}</a></p> {% endcomment %}
+                <p class="my-1"><a href="{% url 'base:news_detail' news.pk %}">{{news.created_date|date:"Y年m月d日" }} : {{news.title}}</a></p>
+                <hr class="my-1", style="background-color:#EEEEEE;">
+        {% endfor %}
+    </div>
+</div>
+{% comment %} <h1 class="animate">こんにちは</h1> {% endcomment %}
+
+
+<!-- サイドバーを作る場合 -->
+<!-- その場合は，いろいろ書くときにサイドバー用のスペースを空けておく -->
+{% comment %} {% include 'base/sidebar.html' %} {% endcomment %} {% endblock %}
